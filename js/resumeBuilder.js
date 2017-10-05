@@ -87,12 +87,12 @@ bio.display = function() {
     $("#header").append(HTMLbioPic.replace("%data%", bio.bioPic));
 
     if (bio.skills.length > 0) {
-      $('#header').append(HTMLskillsStart);
+        $('#header').append(HTMLskillsStart);
 
-      for (var i = 0; i < bio.skills.length; i++) {
-        var formattedSkill = HTMLskills.replace('%data%', bio.skills[i]);
-        $('#skills').append(formattedSkill);
-      }
+        for (var i = 0; i < bio.skills.length; i++) {
+            var formattedSkill = HTMLskills.replace('%data%', bio.skills[i]);
+            $('#skills').append(formattedSkill);
+        }
     }
 
     $("#footerContacts").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
