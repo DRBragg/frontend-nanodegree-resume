@@ -8,7 +8,7 @@ let bio = {
         github: "https://github.com/DRBragg",
         twitter: "@Nope"
     },
-    bioPic: "images/me.jpg",
+    biopic: "images/me.jpg",
     skills: [
         "HTML",
         "CSS",
@@ -43,12 +43,12 @@ let education = {
         location: "Philadelphia, PA",
         degree: "Nanodegree",
         majors: ["Front-End Web Developmet"],
-        years: "2017-2018"
+        dates: "2017-2018"
     }],
     onlineCourses: [{
         title: "Intro to JavaScript",
         school: "Udemy",
-        date: "2017",
+        dates: "2017",
         url: "udemy.com"
     }]
 };
@@ -84,7 +84,7 @@ bio.display = function() {
 
     $("#topContacts").append(HTMLlocation.replace("%data%", bio.contacts.location));
 
-    $("#header").append(HTMLbioPic.replace("%data%", bio.bioPic));
+    $("#header").append(HTMLbioPic.replace("%data%", bio.biopic));
 
     if (bio.skills.length > 0) {
         $('#header').append(HTMLskillsStart);
@@ -151,7 +151,7 @@ education.display = function() {
     for (var i = 0; i < education.schools.length; i++) {
         $(".education-entry").append(HTMLschoolName.replace("%data%", education.schools[i].name));
         $(".education-entry").append(HTMLschoolDegree.replace("%data%", education.schools[i].degree));
-        $(".education-entry").append(HTMLschoolDates.replace("%data%", education.schools[i].years));
+        $(".education-entry").append(HTMLschoolDates.replace("%data%", education.schools[i].dates));
         $(".education-entry").append(HTMLschoolLocation.replace("%data%", education.schools[i].location));
         $(".education-entry").append(HTMLschoolMajor.replace("%data%", education.schools[i].majors));
     }
@@ -161,7 +161,7 @@ education.display = function() {
     for (var j = 0; j < education.onlineCourses.length; j++) {
         $(".education-entry").append(HTMLonlineTitle.replace("%data%", education.onlineCourses[j].title));
         $(".education-entry").append(HTMLonlineSchool.replace("%data%", education.onlineCourses[j].school));
-        $(".education-entry").append(HTMLonlineDates.replace("%data%", education.onlineCourses[j].date));
+        $(".education-entry").append(HTMLonlineDates.replace("%data%", education.onlineCourses[j].dates));
         $(".education-entry").append(HTMLonlineURL.replace("%data%", education.onlineCourses[j].url));
     }
 };
